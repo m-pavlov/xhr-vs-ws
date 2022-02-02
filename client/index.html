@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XHR VS WS test</title>
+  <style>
+    body {
+      padding: 50px;
+    }
+
+    #logs {
+      display: flex;
+      width: 300px;
+      margin: 20px 0;
+    }
+
+    #logs div {
+      flex-basis: 50%;
+    }
+    #xhr:before {
+      content: 'XHR';
+      display: block;
+    }
+    #ws:before {
+      content: 'WS';
+      display: block;
+    }
+
+    #result {
+      color: green;
+      line-height: 2rem;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="counter" value="10" />
+  <button type="button" id="run">Run</button>
+
+  <div id="logs">
+    <div id="xhr"></div>
+    <div id="ws"></div>
+  </div>
+
+  <div id="result"></div>
+
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+  <script src="/index.js" type="module"></script>
+</body>
+</html>
